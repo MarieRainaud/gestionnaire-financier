@@ -1,0 +1,31 @@
+{
+  "clientId": "gestionnaire-financier",
+  "name": "Gestionnaire financier",
+  "enabled": true,
+  "protocol": "openid-connect",
+  "publicClient": false,
+  "clientAuthenticatorType": "client-secret",
+  "standardFlowEnabled": true,
+  "directAccessGrantsEnabled": false,
+  "implicitFlowEnabled": false,
+  "serviceAccountsEnabled": false,
+  "fullScopeAllowed": false,
+  "rootUrl": "https://gestionnaire-financier--ninette.ctn.rs",
+  "baseUrl": "https://gestionnaire-financier--ninette.ctn.rs/",
+  "redirectUris": [
+    "https://gestionnaire-financier--ninette.ctn.rs/auth/callback"
+  ],
+  "webOrigins": [],
+  "defaultClientScopes": [
+    "basic",
+    "profile",
+    "email"
+  ],
+  "attributes": {
+    "pkce.code.challenge.method": "S256",
+    "post.logout.redirect.uris": "https://gestionnaire-financier--ninette.ctn.rs/",
+    "backchannel.logout.url": "https://gestionnaire-financier--ninette.ctn.rs/auth/backchannel-logout",
+    "backchannel.logout.session.required": "true",
+    "backchannel.logout.revoke.offline.tokens": "true"
+  }
+}

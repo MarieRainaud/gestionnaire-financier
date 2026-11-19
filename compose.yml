@@ -1,0 +1,25 @@
+# Préparation SC uniquement. Le déploiement est lancé par Marie.
+# Le service comptes doit être configuré séparément.
+services:
+  gestionnaire-financier-partage:
+    container_name: gestionnaire-financier
+    cpus: '0.1'
+    mem_limit: 256m
+    build: .
+    ports:
+      - '8080:8080'
+    environment:
+      APP_MODE: private
+      AUTH_MODE: oidc
+      APP_ORIGIN: '${APP_ORIGIN}'
+      SECURE_COOKIES: '1'
+      OIDC_ISSUER: '${OIDC_ISSUER}'
+      OIDC_CLIENT_ID: gestionnaire-financier
+      OIDC_CLIENT_SECRET: '${OIDC_CLIENT_SECRET}'
+      DATABASE_URL: 'postgresql+psycopg://finance:${DB_PASSWORD}@atelier-postgres:5432/finance_private'
+    networks:
+      - default
+
+networks:
+  default:
+    external: true

@@ -1,0 +1,2 @@
+FROM postgres:17-alpine
+CMD ["postgres","-c","shared_buffers=32MB","-c","work_mem=2MB","-c","maintenance_work_mem=32MB","-c","max_connections=20","-c","log_statement=none","-c","log_min_error_statement=panic","-c","timezone=Europe/Paris"]

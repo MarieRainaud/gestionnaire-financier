@@ -1,0 +1,15 @@
+node_modules/
+frontend/dist/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+*.dump
+*.backup
+*.log
+*.csv
+*.xlsx
+!examples/*.csv
+!examples/*.xlsx

@@ -1,0 +1,65 @@
+/* Images locales téléchargées : Font Awesome Free, licence dans LICENSE.txt. */
+.image-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask: var(--icon-image) center / contain no-repeat;
+  mask: var(--icon-image) center / contain no-repeat;
+}
+
+.icon-github {
+  --icon-image: url("./github.svg");
+}
+
+.icon-linkedin {
+  --icon-image: url("./linkedin.svg");
+}
+
+.icon-wallet {
+  --icon-image: url("./wallet.svg");
+}
+
+.icon-table-cells-large {
+  --icon-image: url("./table-cells-large.svg");
+}
+
+.icon-right-left {
+  --icon-image: url("./right-left.svg");
+}
+
+.icon-receipt {
+  --icon-image: url("./receipt.svg");
+}
+
+.icon-calendar-days {
+  --icon-image: url("./calendar-days.svg");
+}
+
+.icon-chart-column {
+  --icon-image: url("./chart-column.svg");
+}
+
+.icon-file-import {
+  --icon-image: url("./file-import.svg");
+}
+
+.icon-building-columns {
+  --icon-image: url("./building-columns.svg");
+}
+
+.icon-spin {
+  animation: icon-rotation 1s linear infinite;
+}
+@keyframes icon-rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .icon-spin {
+    animation: none;
+  }
+}
